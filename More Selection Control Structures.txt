@@ -1,0 +1,121 @@
+1.
+//change
+Declare double salesTax as zero
+Declare double total as zero
+Declare string name 
+Declare int taxCode 
+Declare double purchaseAmount as zero
+
+Input name 
+Input purchaseAmount 
+Input taxCode
+	if taxCode is (0-3)
+		than
+			Switch taxCode
+			=0  calculate salesTax as 0% of purchaseAmount
+			=1  calculate salesTax as 3% of purchaseAmount
+			=2  calculate salesTax as 5% of purchaseAmount
+			=3  calculate salesTax as 7% of purchaseAmount
+			endSwitch
+			
+		else print "Invalid Tax Code"  Error
+		
+Total = purchaseAmount + salesTax
+
+print name
+	  purchaseAmount
+	  salesTax
+	  total
+	
+
+	
+	
+	Check:  Steve purchesed 15.65 under taxCode (2).  
+			Switch 2 calculates as 5%.  
+			salesTax = 15.65x 5%(.05) = .7825
+			total = 15.65+ .7825 = 16.4325
+			
+			Prints: 	Steve   (name)
+				    15.65	(purchaseAmount)
+				    .7825	(salesTax)
+				    16.4325 	(total)
+					
+			______________________________________________________________________________
+			
+			Sally purchesed 20.00 under taxCode (0).
+			Switch 0 Calculates as 0%
+			salesTax = 20.00 x 0.00 = 0.00
+			total = 20.00 + 0.00 = 20.00
+			
+			Prints: 		Sally	(name)
+					20.00	(purchaseAmount)
+					0.00	(salesTax)
+					20.00	(total)
+					
+					
+2.
+
+declare int empNum
+declare double hoursWorked as zero
+declare double pay as zero
+declare double total as zero
+declare double overTime as zero
+declare double overPay as zero
+
+input empNum
+input hoursWorked
+	if hoursWorked >= 60.00
+	then 
+		print "Too any hours" error
+input pay
+	if pay >= 25.00 
+	then 
+		print "Too Expensive" error
+		
+if hoursWorked <= 35
+	then
+		total = multiply hoursWorked x pay
+			print empNum
+				hoursWorked
+				pay
+				total
+			    
+	else
+		overTime = hoursWorked - 35
+		overPay = multiply overTime by (pay x 1.5)
+		total = sum of overPay and (pay x 35)
+			print empNum
+				  hoursWorked
+				  pay
+				  total
+			
+			
+	
+	
+	
+	Check:  Employee# 205  worked 55 hours this week and is payed 22.50/hr
+	
+			hoursWorked are less than 60, so passes first validation.  pay is less than 25, so passes second validation.
+			hoursWorked is greater than 35 so it moves to the else statement.  
+			overTime = 55 - 35 = 20 hours
+			overPay = 20 x (22.5 x 1.5) = 675
+			total = 675 + (35 x 22.5) = 1462.5
+			
+			Prints: 		205	(empNum)
+					55	(hoursWorked)
+					22.5	(pay)
+					1462.5	(total)
+		___________________________________________________________________________________________________________________________
+					
+					
+			Employee# 306 worked 24 hours this week and is payed 20.00/hr
+			hoursWorked are less than 60, so passes first validation. pay is less than 25, so passes second validation.
+			hoursWorked are less than 35, so it follows first then statement.
+			total = 24 x 20 = 480
+			
+			Prints:		306	(empNum)
+					24  	(hoursWorked)
+					20.00	(pay)
+					480 	(total)
+			
+		
